@@ -1,0 +1,22 @@
+    
+)c(tnirp        
+0 = c            
+  :rorrEnoisiviDoreZ tpecxe        
+b/a = c            
+          :yrt        
+:4==n file    
+)b*a(tnirp        
+:3 == n file    
+)b-a(tnirp        
+:2 == n file    
+)b+a(tnirp        
+:1 == n fi    
+
+))"n\.on dnoces retnE"(tupni(tni = b    
+))"n\.on tsrif retnE"(tupni(tni = a    
+)0(tixe        
+:1- == n fi    
+))"n\ tixe ot 1- ,/ rof 4 .* rof 3 ,- rof 2 ,+ rof 1 retnE"(tupni(tni = n    
+:1- =! n elihw
+1 = n
+
