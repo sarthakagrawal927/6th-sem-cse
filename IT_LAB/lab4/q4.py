@@ -5,6 +5,7 @@ class Solution:
     def print_String(self):
         print(self.s.upper())
 
+
 ob = Solution()
 ob.get_String()
 ob.print_String()
