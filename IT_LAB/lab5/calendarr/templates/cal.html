@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Addition</title>
+</head>
+<body>
+        <h1 class="heading">Calculator App</h1>
+            <div id="container">
+              <div id="container-1">
+                   <div id="form-container">
+                        <label for="num1">Enter num1: </label>
+                         <input type="text" id="num1" /> 
+                         <label for="num2">Enter num2: </label> 
+                         <input type="text" id="num2" /> 
+                         <label for="opt">Choose an Option:</label> 
+                         <select id="opt" name="calcop"> 
+                             <option value="ADD">ADD</option> 
+                             <option value="SUBTRACT">SUBTRACT</option> 
+                             <option value="MULTIPLY">MULTIPLY</option> 
+                             <option value="DIVIDE">DIVIDE</option> </select> 
+                             <button onclick="myfunc()">Calculate</button> 
+                             <p id="para1"></p> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <script type="text/javascript"> 
+                    function myfunc() { 
+                        var n1 = document.getElementById('num1').value
+                         var n2 = document.getElementById('num2').value 
+                         var op = document.getElementById('opt').value 
+                         switch (op) { 
+                                case 'ADD': var n3 = parseInt(n1) + parseInt(n2) 
+                                            break 
+                                case 'SUBTRACT': var n3 = parseInt(n1) - parseInt(n2) 
+                                break 
+                                case 'MULTIPLY': var n3 = parseInt(n1) * parseInt(n2) 
+                                break 
+                                case 'DIVIDE': var n3 = (parseFloat(n1) / parseFloat(n2)).toFixed(2)
+                         } 
+                         document.getElementById('para1').innerHTML = 'The result of operation is ' + n3
+                         }
+                        </script>
+                         <style>
+                          .heading { text-align: center; }
+                           #container { display: flex; align-items: center; justify-content: center; padding: 2%; } 
+                           #container-1 { height: 350px; width: 300px; } 
+                           #results { background-color: lightcyan; } 
+                           #form-container { flex: 1; display: flex; flex-direction: column; } 
+                           input, textarea, select, button { padding: 8px; margin-bottom: 16px; } 
+                           button { margin-top: 16px; } 
+                           label { margin-bottom: 4px; margin-top: 4px; } 
+                        </style>
+</body>
+</html>

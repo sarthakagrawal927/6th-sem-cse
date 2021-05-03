@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+</head>
+<body>
+    
+    <style> 
+        .heading { text-align: center; } 
+        #container { display: flex; flex-direction: row; background-color: wheat; padding: 2%; } 
+        #results { flex: 1; flex-grow: 1; padding-left: 3%;background-color: white; } 
+        form { flex: 1; display: flex; flex-direction: column; width: 50%; margin-right: 16px; }
+        input, textarea, button { padding: 8px; margin-bottom: 16px; }
+        label { margin-bottom: 4px; }
+     </style>
+    <h2 class="heading">Student App</h2>
+     <div id="container">
+        <form id="student-form">
+            <input type="text" id="name" placeholder="Name" />
+            <input type="email" id="email" placeholder="Email" />
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" />
+            <label for="address">Address</label> 
+            <textarea id="address" form="student-form"></textarea>
+             <label for="eng">English Marks: </label>
+            <input type="number" id="eng" placeholder="English" /> 
+            <label for="phy">Physics Marks: </label> 
+            <input type="number" id="phy" placeholder="Physics" /> 
+            <label for="chem">Chemistry Marks: </label>
+            <input type="number" id="chem" placeholder="Chemistry" />
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+        <div id="results"><p id="para1"></p></div>
+     </div>
+     <script>
+        document.getElementById('submit-btn') .addEventListener('click', function (event){ 
+             event.preventDefault()
+             results()
+         })
+         function results() { 
+         const resultDiv = document.getElementById('results') 
+         while (resultDiv.firstChild) { 
+             resultDiv.removeChild(resultDiv.lastChild)
+          } 
+         let name = document.createElement('h2') 
+         name.innerHTML = 'Name: ' + document.getElementById('name').value
+         let email = document.createElement('h3') 
+         email.innerHTML = 'Email: ' + document.getElementById('email').value
+         let dob = document.createElement('h3') 
+         dob.innerHTML = 'DOB: ' + document.getElementById('dob').value
+         let address = document.createElement('h4') 
+         address.innerHTML = 'Address: ' + document.getElementById('address').value 
+         let escore = document.getElementById('eng').value 
+         let pscore = document.getElementById('phy').value
+         let cscore = document.getElementById('chem').value 
+         let eng = document.createElement('p') 
+         eng.innerHTML = `English: ${escore}`
+         let phy = document.createElement('p') 
+         phy.innerHTML= `Physics: ${pscore}` 
+         let chem = document.createElement('p') 
+         chem.innerHTML = `Chemistry: ${cscore}`
+         let total = parseFloat(escore) + parseFloat(pscore) + parseFloat(cscore)
+         console.log(total)
+         let percentage = ((total / 300) * 100).toFixed(2) 
+         let perc = document.createElement('p') 
+         perc.innerHTML = `Percentage: ${percentage}`
+         resultDiv.appendChild(name)
+         resultDiv.appendChild(email) 
+         resultDiv.appendChild(dob)
+         resultDiv.appendChild(address)
+         resultDiv.appendChild(eng) 
+         resultDiv.appendChild(phy) 
+         resultDiv.appendChild(chem)
+         resultDiv.appendChild(perc) 
+     }
+     </script>
+</body>
+</html>

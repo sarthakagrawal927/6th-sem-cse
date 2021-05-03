@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">	
+	</script>
+    <title>Captcha</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+       var count = 0;
+       function myfunc(){
+          var val = document.getElementById("captcha").value;
+          if(val==="XsA2q9")
+               alert("success");
+          else 
+            count++;
+          document.getElementById("pp").innerHTML=count.toString();  
+          if(count===3){
+            alert("textbox disabled");
+            $('#captcha').attr('disabled', 'disabled');
+            //document.getElementById("captcha").prop('disabled',true);
+          }     
+        }
+    </script>
+       <h3>CAPTCHA : XsA2q9</h3>
+        CAPTCHA : <input type="text" id="captcha"><br>
+        <button onclick="myfunc()">Submit</button><br\>
+        <p id="pp"></p>
+</body>
+</html>

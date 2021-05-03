@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+<body>
+    <h1 style="text-align:center; justify-content: center;">Employee</h1>
+    <div class="container" style="text-align: center; justify-content: center;padding-top: 100px;">
+        <label for="emp">Choose an employee:</label>
+        <select name="emp" id="emp">
+          <option value="1">1001</option>
+          <option value="2">1002</option>
+          <option value="3">1003</option>
+          <option value="4">1004</option>
+        </select>
+        &nbsp;&nbsp;
+        <input type="date" placeholder="Date of joining" id="doj"><br>
+        <br>
+        <button onclick="myfunc()">Submit</button><br>
+        <h3>Experience</h3>
+        <label id="exp"></label>
+        <h3>Promotion</h3>
+        <label id="promote"></label>
+        </div>
+        <script type="text/javascript">
+          function myfunc(){
+          var emp = document.getElementById("emp").value;
+          var start = document.getElementById("doj").value;
+          var doj = new Date(start);
+          var curr_date = new Date();
+          var diff = new Date(curr_date-doj);
+          var days = diff/1000/60/60/24;
+          document.getElementById("exp").innerHTML = parseInt(days).toString()+" days";
+          if(days/5>=365)
+            document.getElementById("promote").innerHTML="YES";
+          else
+            document.getElementById("promote").innerHTML="NO";
+         
+      }
+      </script>
+</body>
+</html>
