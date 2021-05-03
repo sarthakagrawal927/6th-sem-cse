@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 /PP_LAB/Parallel_Prog_Lab_Manual_2021_Non_editable.pdf
 /IT_LAB/ITLAB-2021.pdf
 *.docx
 *.docx#
+=======
+/PP_LAB/Parallel_Prog_Lab_Manual_2021_Non_editable.pdf
+/IT_LAB/ITLAB-2021.pdf
+*.docx
+*.docx#
+*.odt
+*.odt#
+>>>>>>> a3c3a644dc5d353518f85d95081d888ba319246a
