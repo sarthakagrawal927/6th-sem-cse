@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)mskgr)a%7!h)t&4q)&+07*kmm9)xs0182_xg72z6%)jc@0!1c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'week8.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'week8.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'week8',
-        'USER' : 'keerthan',
-        'PASSWORD' : '1234',
-        'HOST' : 'localhost'
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost'
     }
 }
 
